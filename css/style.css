@@ -2,32 +2,36 @@
   box-sizing: border-box;
 }
 body {
-  margin: 0;
+  margin: 0 auto;
   font-family: sans-serif;
 }
 
 .container {
   max-width: 1280px;
   margin: auto;
+  padding-left:55px;
 /*padding: 0 15px;*/
 }
 
 .row {
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
   margin-left: -15px;
   margin-right: -15px;
+  /*
   border: 1px solid black;
+  */
 }
 
 .col {
-  padding-left: 15px;
-  padding-right: 15px;
   flex-grow: 0;
   flex-shrink: 0;
   width: 100%;
   height: 100%;
+  /*
   border: 1px solid black;
+  */
 }
 
 .col--lg-1 { width: 25%; }
@@ -40,9 +44,9 @@ body {
 }
 
 .page-header{
-  background-image: url(../images/bg_main.png);
-  height: 768px;
-  background-repeat: no-repeat;
+width: 1280px;
+height: 68px;
+position: absolute;
 }
 
 .logo{
@@ -50,11 +54,13 @@ font-family: 'Prata', Regular;
 font-size: 30px;
 color: #eec643;
 text-decoration: none;
-margin-top: 30px;
+padding-top: 10px;
 }
 
 .main-nav{
   border: 1px solid black;
+  padding-top: 40px;
+  padding-right: 40px;
 }
 
 .main-nav_list{
@@ -74,6 +80,19 @@ margin-top: 30px;
   font-family: 'PT Sans', Regular;
   font-size: 16px;
   color: #021a23;
+  text-transform: uppercase;
+}
+
+.logo-block{
+  margin-top: 20px;
+}
+
+.promo{
+  width: 1280px;
+  height: 700px;
+  background-image: url(../images/bg_main.png);
+  background-repeat: no-repeat;
+  background-position-x: center;
 }
 
 .page-header_promo{
@@ -85,6 +104,9 @@ font-family: 'Prata', Regular;
 font-weight: normal;
 font-size: 55px;
 color: #f9fcfc;
+margin-left: 55px;
+padding-top: 210px;
+width: 700px;
 }
 
 .page-header_descr{
@@ -92,6 +114,8 @@ font-family: 'PT Sans', Regular;
 font-weight: normal;
 font-size:20px;
 color: #f9fcfc;
+margin-left: 55px;
+width: 480px;
 }
 
 .trial{
@@ -99,6 +123,7 @@ border: 2px solid black;
 background-color: white;
 width:270px;
 height:420px;
+margin-top: 170px;
 }
 
 .trial_title{
@@ -171,8 +196,6 @@ background-color: #eec643;
 .tempo{
 width: 1280px;
 height: 700px;
-margin-left: 55px;
-margin-right: 55px;
 }
 
 .tempo_title_block{
@@ -234,47 +257,74 @@ height: 700px;
 }
 
 .inschool_title{
-
+font-family: 'Prata', regular;
+font-size: 50px;
+font-weight: normal;
+color: #021a23;
 }
 
 .inschool_promo{
-
+height: 568px;
+width: 770px;
+background-image: url(../images/video_card_img_1.png);
+margin-right: 30px;
 }
 
 .inschool_promo-info{
-
+width: 260px;
+height: 160px;
 }
 
 .inschool_block-name{
-
+font-family: 'PT Sans', regular;
+font-size: 30px;
+font-weight: bold;
+color: #f9fcfc;
 }
 
 .inschool_block-text{
-
+font-family: 'PT Sans', regular;
+font-size: 20px;
+font-weight: normal;
+color: #f9fcfc;
 }
 
 .inschool_promo_small{
-
+width: 270px;
 }
 
 .inschool_promo_small-name{
-
+font-family: 'PT Sans', regular;
+font-size: 20px;
+font-weight: bold;
+color: #f9fcfc;
 }
 
 .inschool_promo_small-text{
-
+font-family: 'PT Sans', regular;
+font-size: 14px;
+font-weight: normal;
+color: #f9fcfc;
 }
 
 .inschool_promo_small-1{
-
+width: 270px;
+height: 169px;
+background-image: url(../images/video_card_img_2.png);
+margin-bottom: 30px;
 }
 
 .inschool_promo_small-2{
-
+width: 270px;
+height: 169px;
+background-image: url(../images/video_card_img_3.png);
+margin-bottom: 30px;
 }
 
 .inschool_promo_small-3{
-
+width: 270px;
+height: 169px;
+background-image: url(../images/video_card_img_4.png);
 }
 
 
@@ -289,7 +339,16 @@ height: 700px;
 }
 
 .welcome_title-block{
-
+display: -webkit-flex;
+display: -moz-flex;
+display: -ms-flex;
+display: -o-flex;
+display: flex;
+-webkit-flex-direction: row;
+-moz-flex-direction: row;
+-ms-flex-direction: row;
+-o-flex-direction: row;
+flex-direction: row;
 }
 
 .welcome_title{
@@ -309,15 +368,22 @@ height: 700px;
 }
 
 .welcome_map{
-
+width: 870px;
+height: 468px;
+background-image: url(../images/Map.png);
 }
 
-
+.form-trial{
+  width: 270px;
+  height: 570px;
+  border: 2px solid #eec643;
+}
 
 
 .footer_block{
 width: 1280px;
 height: 120px;
+flex-direction: row;
 }
 
 .footer_logo-block{
