@@ -8,8 +8,9 @@ body {
 
 .container {
   max-width: 1280px;
-  margin: auto;
+  margin: 0 auto;
   padding-left:55px;
+  padding-right: 55px;
 /*padding: 0 15px;*/
 }
 
@@ -17,8 +18,6 @@ body {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  margin-left: -15px;
-  margin-right: -15px;
   /*
   border: 1px solid black;
   */
@@ -58,7 +57,6 @@ padding-top: 10px;
 }
 
 .main-nav{
-  border: 1px solid black;
   padding-top: 40px;
   padding-right: 40px;
 }
@@ -133,12 +131,20 @@ text-align: center;
 
 
 
+
 .beginners{
 width: 1280px;
 height: 700px;
 }
 
 .beginners_title{
+font-family: 'Prata', Regular;
+font-size: 50px;
+font-weight: normal;
+color: #021a23;
+}
+
+.beginners_title-block{
 
 }
 
@@ -147,6 +153,8 @@ font-family: 'PT Sans', Regular;
 font-size: 30px;
 font-weight: bold;
 color: #f9fcfc;
+margin-left: 30px;
+width: 50px;
 }
 
 .beginners_block-text{
@@ -195,19 +203,27 @@ background-color: #eec643;
 
 .tempo{
 width: 1280px;
-height: 700px;
+height: 570px;
+margin-top: 90px;
 }
 
-.tempo_title_block{
+.tempo_title-block{
 width: 570px;
-height: 70px;
+height: 60px;
+border-top: 2px solid #eec643;
+border-bottom: 2px solid #eec643;
+margin-bottom: 30px;
 }
 
 .tempo_title-text{
+position: relative;
+top: -40px;
+margin-left: 30px;
 font-family: 'Prata', Regular;
 font-size: 50px;
 font-weight: normal;
 color: #021a23;
+
 }
 
 .tempo_block-name{
@@ -215,6 +231,7 @@ font-family: 'PT Sans', Bold;
 font-size: 30px;
 font-weight: bold;
 color: #f9fcfc;
+margin-left: 30px;
 }
 
 .tempo_block-text{
@@ -222,6 +239,8 @@ font-family: 'PT Sans', Regular;
 font-size: 20px;
 font-weight: normal;
 color: #f9fcfc;
+margin-left: 30px;
+width: 220px;
 }
 
 .tempo_command{
@@ -235,14 +254,12 @@ margin-right: 30px;
 width: 270px;
 height: 470px;
 background-image: url(../images/advantages_card_img_2.png);
-margin-right: 30px;
 }
 
 .tempo_studio{
 width: 270px;
 height: 570px;
 background-image: url(../images/advantages_card_img_3.png);
-margin-right: 30px;
 }
 
 .tempo_form-trial{
@@ -273,6 +290,7 @@ margin-right: 30px;
 .inschool_promo-info{
 width: 260px;
 height: 160px;
+margin-left: 30px;
 }
 
 .inschool_block-name{
@@ -309,67 +327,83 @@ color: #f9fcfc;
 
 .inschool_promo_small-1{
 width: 270px;
-height: 169px;
+height: 170px;
 background-image: url(../images/video_card_img_2.png);
 margin-bottom: 30px;
+border: 1px solid black;
 }
 
 .inschool_promo_small-2{
 width: 270px;
-height: 169px;
+height: 170px;
 background-image: url(../images/video_card_img_3.png);
 margin-bottom: 30px;
+border: 1px solid black;
 }
 
 .inschool_promo_small-3{
 width: 270px;
-height: 169px;
+height: 170px;
 background-image: url(../images/video_card_img_4.png);
+border: 1px solid black;
 }
 
 
 
 .welcome{
 width: 1280px;
-height: 700px;
+height: 570px;
 }
 
 .welcome_info{
+width: 870px;
+}
 
+.welcome-title{
+  width: 570px;
+  height: 60px;
+  border-top: 2px solid #eec643;
+  border-bottom: 2px solid #eec643;
+  margin-bottom: 30px;
 }
 
 .welcome_title-block{
-display: -webkit-flex;
-display: -moz-flex;
-display: -ms-flex;
-display: -o-flex;
 display: flex;
--webkit-flex-direction: row;
--moz-flex-direction: row;
--ms-flex-direction: row;
--o-flex-direction: row;
 flex-direction: row;
 }
 
-.welcome_title{
-
+.welcome_title-text{
+font-family: 'Prata', Regular;
+font-size: 50px;
+font-weight: normal;
+color: #021a23;
+position: relative;
+top: -30px;
+margin-left: 30px;
 }
 
 .welcome_address-block{
-
+width: 270px;
+margin-left: 30px;
 }
 
 .welcome_phone{
-
+font-family: 'PT Sans', regular;
+font-size: 20px;
+font-weight: normal;
+color: #021a23;
 }
 
 .welcome_address{
-
+font-family: 'PT Sans', regular;
+font-size: 20px;
+font-weight: normal;
+color: #021a23;
 }
 
 .welcome_map{
 width: 870px;
-height: 468px;
+height: 470px;
 background-image: url(../images/Map.png);
 }
 
@@ -383,25 +417,40 @@ background-image: url(../images/Map.png);
 .footer_block{
 width: 1280px;
 height: 120px;
+display: -webkit-flex;
+display: -moz-flex;
+display: -ms-flex;
+display: -o-flex;
+display: flex;
 flex-direction: row;
 }
 
 .footer_logo-block{
-
-}
-
-.footer_logo{
-
+  border: 1px solid black;
+  width: 100%;
 }
 
 .footer_nav{
+  border: 1px solid black;
+  padding-top: 40px;
+  width: 100%;
+}
 
+.footer_nav-list{
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  list-style: none;
 }
 
 .footer_nav-item{
-
+  padding-left: 20px;
 }
 
 .footer-nav_link{
-
+  text-decoration: none;
+  font-family: 'PT Sans', Regular;
+  font-size: 12px;
+  color: #021a23;
+  text-transform: uppercase;
 }
