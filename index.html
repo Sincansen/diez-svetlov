@@ -2,194 +2,245 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width; initial-scale=1">
   <title>Школа Diez</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/normalize.css">
   <link href="https://fonts.googleapis.com/css?family=PT+Sans|Prata" rel="stylesheet">
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/script.js"></script>
 </head>
 <body>
-    <header class="page-header">
-        <div class="container">
-          <div class="row">
-            <div class="col col--lg-1 logo-block">
-             <a href="#" class="logo">Diez</a>
-            </div>
-            <div class="col  col--lg-3">
-              <nav class="main-nav">
-                <ul class="main-nav_list">
-                  <li class="main-nav_item">
-                    <a href="" class="main-nav_link">Направления</a>
-                  </li>
-                  <li class="main-nav_item">
-                    <a href="" class="main-nav_link">О школе</a>
-                  </li>
-                  <li class="main-nav_item">
-                    <a href="" class="main-nav_link">Видео</a>
-                  </li>
-                  <li class="main-nav_item">
-                    <a href="" class="main-nav_link">Контакты</a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-          </div>
+  <header class="page-header">
+    <div class="container">
+      <div class="logo-block">
+        <a href="#" class="logo">Diez</a>
+      </div>
+      <div class="menu">
+        <nav class="main-nav" id="main-nav">
+          <ul class="main-nav_list">
+            <li class="main-nav_item">
+              <a href="#" class="main-nav_link">Направления</a>
+            </li>
+            <li class="main-nav_item">
+              <a href="#" class="main-nav_link">О школе</a>
+            </li>
+            <li class="main-nav_item">
+              <a href="#" class="main-nav_link">Видео</a>
+            </li>
+            <li class="main-nav_item">
+              <a href="#" class="main-nav_link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="nav-toggle">
+          <span>Menu</span>
         </div>
-      </header>
+      </div>
+    </div>
+  </header>
+  <main>
     <section class="promo">
-      <div class="row">
-        <div class="col col--lg-3">
-          <div class="page-header_promo">
-            <h1 class="page-header_title">Diez - школа музыкального искусства</h1>
-            <div class="page-header_descr">
-              <p>Научим петь, играть на инструментах, не бояться сцены и получать удовольствие от музыки</p>
-            </div>
+      <div class="container_promo">
+        <div class="promo_block">
+          <h1 class="page-header_title"><span class="page-header_title-desktop">Diez - школа музыкального искусства</span>Школа музыкального искусства</h1>
+          <p class="page-header_descr">Научим петь, играть на инструментах, не бояться сцены и получать удовольствие от музыки</p>
+        </div>
+      </div>
+      <div class="button">
+        <a href="#" class="promo-button"><h4 class="promo-button_text">вводный урок</h4></a>
+      </div>
+      <div class="promo-form">
+        <form action="#">
+          <p class="promo-form_title">Вводный урок</p>
+          <p class="promo-form_descr">Попробуй любые направления бесплатно</p>
+          <div class="description_block">
+            <p><input type="text" class="description-form" placeholder="Имя"></p>
+            <p><input type="text" class="description-form" placeholder="Телефон"></p>
+            <p><select size="#" name="#" class="form-description">
+              <option>Направления</option>
+                <option>Гитара</option>
+                <option>Вокал</option>
+                <option>Фортепиано</option>
+              </select></p>
           </div>
-        </div>
-        <div class="col col--lg-1">
-          <form action="#" class="trial">
-            <h2 class="trial_title">Вводный урок</h2>
-          </form>
-        </div>
+          <p><input type="submit" class="promo-form_button" value="Записаться"></p>
+        </form>
       </div>
     </section>
 
     <section class="beginners">
-      <div class="container container_beginners">
-        <div class="beginners_title-block">
-          <h2 class="beginners_title">Растим музыкантов</h2>
-        </div>
-        <div class="row row_beginners">
-          <div class="col col--lg-2 col--lg-pl90 beginners_guitar">
-            <p class="beginners_block-name">Гитара</p>
-            <p class="beginners_block-text-desktop">Хочешь играть как Джими Хендрикс, Би Би Кинг или Андрес Сеговия - мы научим</p>
-            <p class="beginners_block-text-mobile">Начни играть как Джими Хендрикс</p>
-            <p class="beginners_guitar-price-desktop">1 урок от 800₽</p>
-          </div>
-          <div class="col col--lg-2 beginners_vocal">
-            <p class="beginners_block-name">Вокал</p>
-            <p class="beginners_block-text-desktop">Академический, рок, эстрадный, джазовый</p>
-            <p class="beginners_block-text-mobile">Пой как Селин Дион и Эми Уайнхаус</p>
-          </div>
-          <div class="col col--lg-2 col--lg-pl90 beginners_piano">
-            <p class="beginners_block-name">Фортепиано</p>
-            <p class="beginners_block-text-desktop">Академический, рок, эстрадный, джазовый</p>
-            <p class="beginners_block-text-mobile">Чувствуй клавиши, как Людовико Энауди</p>
-          </div>
-          <div class="col col--lg-1 beginners_lections">
-            <p class="beginners_block-name">Лекции</p>
-            <p class="beginners_block-text-desktop">Подтяни свои знания в теории музыки</p>
-          </div>
-          <div class="col col--lg-1 beginners_all-tracks">
-            <p class="beginners_block-name">Все направления</p>
-          </div>
+      <div class="beginners_title-block">
+        <h2 class="beginners_title">Растим музыкантов</h2>
+      </div>
+      <div class="beginners-desktop">
+        <article class="beginners_item beginners_item-vocal">
+          <h3 class="block_item-name">Вокал</h3>
+          <p class="block_item-text">Академический, рок, эстрадный, джазовый</p>
+        </article>
+        <article class="beginners_item beginners_item-guitar">
+          <h3 class="block_item-name">Гитара</h3>
+          <p class="block_item-text">Хочешь играть как Джими Хендрикс, Би Би Кинг или Андрес Сеговия - мы научим</p>
+        </article>
+        <article class="beginners_item beginners_item-piano">
+          <h3 class="block_item-name">Фортепиано</h3>
+          <p class="block_item-text">Академический, рок, эстрадный, джазовый</p>
+        </article>
+        <article class="beginners_item beginners_item-lections">
+          <h3 class="block_item-name">Лекции</h3>
+          <p class="block_item-text">Подтяни свои знания в теории музыки</p>
+        </article>
+        <div class="beginners_item beginners_item-button">
+          <a href="#" class="beginners__button">Все направления</a>
         </div>
       </div>
     </section>
 
     <section class="tempo">
-      <div class="container container_tempo">
-        <div class="row">
-          <div class="col col--lg-2">
-            <div class="row" >
-              <div class="col  col--lg-4 tempo_title-block">
-                <h2 class="tempo_title-text">Задаем темп</h2>
-              </div>
-              <div class="col  col--lg-2 tempo_command">
-                <p class="tempo_block-name">Состав</p>
-                <p class="tempo_block-text">Тебя будут обучать профессионалы с высшим музыкальным образованием</p>
-              </div>
-              <div class="col  col--lg-2 tempo_result">
-                <p class="tempo_block-name">Результат</p>
-                <p class="tempo_block-text">Выступи на отчетном концерте через три месяца обучения</p>
-              </div>
+      <div class="tempo-left">
+        <div class="tempo_title-block">
+          <h2 class="tempo_title">Задаем темп</h2>
+        </div>
+        <article class="tempo_item tempo-command">
+          <h3 class="block_item-name">Состав</h3>
+          <p class="block_item-text">Тебя будут обучать профессионалы с высшим музыкальным образованием</p>
+        </article>
+        <article class="tempo_item tempo-result">
+          <h3 class="block_item-name">Результат</h3>
+          <p class="block_item-text">Выступи на отчетном концерте через три месяца обучения</p>
+        </article>
+      </div>
+      <div class="tempo-right">
+        <article class="tempo_item tempo-studio">
+          <h3 class="block_item-name">Студия</h3>
+          <p class="block_item-text">Запиши свою песню в нашей студии звукозаписи, одна песня в месяц бесплатно</p>
+        </article>
+        <div class="button promo-button">
+          <a href="#" class="tempo_button">Вводный урок</a>
+        </div>
+        <div class="tempo-form">
+          <form action="#">
+            <p class="tempo_form-title">Вводный урок</p>
+            <p class="tempo_form-descr">Попробуй любые направления бесплатно</p>
+            <div class="tempo_description-block">
+              <p><input type="text" class="tempo_description-form" placeholder="Имя"></p>
+              <p><input type="text" class="tempo_description-form" placeholder="Телефон"></p>
+              <p><select size="#" name="#" class="tempo_description-form">
+                <option>Направления</option>
+                  <option>Гитара</option>
+                  <option>Вокал</option>
+                  <option>Фортепиано</option>
+              </select></p>
             </div>
-          </div>
-          <div class="col col--lg-1 tempo_studio">
-            <p class="tempo_block-name">Студия</p>
-            <p class="tempo_block-text">Запиши свою песню в нашей студии звукозаписи, одна песня в месяц бесплатно</p>
-          </div>
-          <div class="col  col--lg-1 tempo_form-trial">
-            <form action="#"></form>
-          </div>
-
+            <p><input type="submit" class="tempo_form-sign" value="записаться"></p>
+          </form>
         </div>
       </div>
     </section>
 
     <section class="inschool">
-      <div class="container container_inschool">
-        <div class="inschool_title-block">
+       <div class="inschool_title-block">
           <h2 class="inschool_title">В стенах школы</h2>
         </div>
-        <div class="row row_inschool">
-          <div class="col col--lg-p50 inschool_promo">
-            <div class="col inschool_promo-info">
-              <p class="inschool_block-name">Зимняя вишня</p>
-              <p class="inschool_block-text">Заключительный зимний концерт 2017 года, выступало 97 учеников</p>
-            </div>
+      <div class="small-triangle"></div>
+      <div class="inschool_promo" id="slider">
+        <article class="inschool_promo-block inschool_promo-block-cherry">
+          <picture class="inschool_image">
+              <img src="images/video_card_img_1.png" alt="">
+          </picture>
+          <div class="inschool_name inschool_name-sign">
+            <h3 class="block_item-name">Зимняя вишня</h3>
+            <p class="block_item-text">Финальный концерт 2018 года</p>
           </div>
-          <div class="col--lg-1 inschool_promo-right">
-            <div class="inschool_promo_small">
-              <div class="inschool_promo_small-1">
-                <p class="inschool_promo_small-name">Янг Чжо</p>
-                <p class="inschool_promo_small-text">Репетиция сольной партии скрипки</p>
-              </div>
-              <div class="inschool_promo_small-2">
-                <p class="inschool_promo_small-name">Летний штиль</p>
-                <p class="inschool_promo_small-text">За кулисами концерта</p>
-              </div>
-              <div class="inschool_promo_small-3">
-                <p class="inschool_promo_small-name">Сергей Трофимов</p>
-                <p class="inschool_promo_small-text">Репетиция сольной партии скрипки</p>
-              </div>
-            </div>
+          <div class="triangle-big"></div>
+        </article>
+        <article class="inschool_promo-block inschool_promo-block-violin">
+          <picture class="inschool_image">
+              <img src="images/video_card_img_2.png" alt="">
+          </picture>
+          <div class="inschool_name inschool_name-sign">
+            <h3 class="block_item-name-small">Янг Чжо</h3>
+            <p class="block_item-text-small">Репетиция сольной партии скрипки</p>
           </div>
-        </div>
+          <div class="triangle-next"></div>
+        </article>
+        <article class="inschool_promo-block inschool_promo-block-summer">
+          <picture class="inschool_image">
+              <img src="images/video_card_img_3.png" alt="">
+          </picture>
+          <div class="inschool_name inschool_name-sign">
+            <h3 class="block_item-name-small">Летний штиль</h3>
+            <p class="block_item-text-small">За кулисами концерта</p>
+          </div>
+          <div class="triangle-next"></div>
+        </article>
+        <article class="inschool_promo-block inschool_promo-block-horse">
+          <picture class="inschool_image">
+              <img src="images/video_card_img_4.png" alt="">
+          </picture>
+          <div class="inschool_name inschool_name-sign">
+            <h3 class="block_item-name-small">Сергей Трофимов</h3>
+            <p class="block_item-text-small">Выйду в поле с конем</p>
+          </div>
+          <div class="triangle-next"></div>
+        </article>
       </div>
     </section>
 
     <section class="welcome">
-      <div class="container container_welcome">
-        <div class="row">
-          <div class="col  col--lg-3 welcome_info">
-            <div class="col col--lg-4 welcome_title-block">
-              <div class="col  col--lg-2 welcome-title">
-                <h1 class="welcome_title-text">Ждем тебя</h1>
-              </div>
-              <div class="col  col--lg-2 welcome_address-block">
-                <p class="welcome_phone">+7 (812) 556 56 56</p>
-                <p class="welcome_address">СПб, 6 линия ВО, 42</p>
-              </div>
-            </div>
-            <div class="col col--lg-4 welcome_map">
-            </div>
-          </div>
-          <div class="col  col--lg-1">
-            <form action="#" class="form-trial"></form>
+      <div class="welcome_container">
+        <div class="welcome_block">
+          <h2 class="welcome_title">Ждем тебя</h2>
+          <div class="welcome_block-address">
+            <p class="block_text-address">СПб, 6-я линия В.О., 42 </p>
+            <a href="#">+7 (812) 566 56 56</a>
           </div>
         </div>
+
+        <div id="welcome_map" class="welcome_map">
+        </div>
       </div>
+      <div class="button">
+        <a href="#" class="promo-button"><h4 class="promo-button_text">вводный урок</h4></a>
+      </div>
+      <div class="welcome-info">
+          <div class="welcome-form">
+            <form action="#">
+              <p class="tempo_form-title">Вводный урок</p>
+              <p class="tempo_form-descr">Попробуй любые направления бесплатно</p>
+              <div class="tempo_description-block">
+                <p><input type="text" class="tempo_description-form" placeholder="Имя"></p>
+                <p><input type="text" class="tempo_description-form" placeholder="Телефон"></p>
+                <p><select size="#" name="#" class="tempo_description-form">
+                  <option>Направления</option>
+                    <option>Гитара</option>
+                    <option>Вокал</option>
+                    <option>Фортепиано</option>
+                </select></p>
+              </div>
+              <p><input type="submit" class="tempo_form-sign" value="записаться"></p>
+            </form>
+          </div>
+        </div>
     </section>
-
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="footer_block">
-            <div class="footer_logo-block">
-              <a href="" class="footer_logo">Diez</a>
-            </div>
-            <div class="footer_nav">
-              <ul class="footer_nav-list">
-                <li class="footer_nav-item"> <a href="#" class="footer-nav_link">youtube</a></li>
-                <li class="footer_nav-item"> <a href="#" class="footer-nav_link">instagram</a></li>
-                <li class="footer_nav-item"> <a href="#" class="footer-nav_link">facebook</a></li>
-                <li class="footer_nav-item"> <a href="#" class="footer-nav_link">vkontakte</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer_logo">
+        <a href="#" class="footer_logo-text">Diez</a>
       </div>
-    </footer>
-
+      <div class="footer-block">
+        <nav class="footer_nav" id="footer_nav">
+          <ul class="footer_nav-list">
+            <li class="footer_nav-item"> <a href="#" class="footer-nav_link">youtube</a></li>
+            <li class="footer_nav-item"> <a href="#" class="footer-nav_link">instagram</a></li>
+            <li class="footer_nav-item"> <a href="#" class="footer-nav_link">facebook</a></li>
+            <li class="footer_nav-item"> <a href="#" class="footer-nav_link">vkontakte</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

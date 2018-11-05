@@ -1,471 +1,1327 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
+
 body {
-  margin: 0 auto;
-  font-family: sans-serif;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 0;
+}
+
+
+h1 {
+    font-family: Prata;
+    font-size: 32px;
+    font-weight: 400;
+}
+
+
+h3 {
+   font-family: PT Sans;
+   font-weight: 700;
+   font-size: 18px;
+}
+
+h4 {
+    font-family: PT Sans;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.page-header {
+    width: 100%;
+    position: fixed;
+    margin: 0 auto;
+    padding: 0;
+    z-index: 1;
 }
 
 .container {
-  max-width: 100%;
-  margin: 0 auto;
-  padding-left:55px;
-  padding-right: 55px;
-  padding-bottom: 90px;
+    display: flex;
+    justify-content: space-between;
+    padding: 22px 16px;
+    margin: 0;
 }
 
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
+.logo {
+    width: 70px;
+    padding: 0;
+    margin: 0;
+    z-index: 2;
 }
 
-.col {
-  flex-grow: 0;
-  flex-shrink: 0;
-  width: 100%;
+.logo__text {
+    text-decoration: none;
+    font-family: Prata;
+    font-size: 30px;
+    font-weight: 400;
+    font-style: normal;
+    color: #eec643;
+}
+
+.menu{
+    padding: 0;
+    margin: 0;
+}
+
+.nav-toggle {
+    transition: all .3s;
+    position: relative;
+    width: 22px;
+    height: 24px;
+    margin-left: 150px;
+    z-index: 1;
+}
+
+.nav-toggle:before {
+  transition: all .3s;
+  content: '';
+  position: absolute;
+  left: -10px;
+  width: 3px;
   height: 100%;
+  background-color: #fff;
 }
 
-.col--lg-1 { width: 25%; }
-.col--lg-2 { width: 50%; }
-.col--lg-3 { width: 75%; }
-.col--lg-4 { width: 100%; }
-
-.col--lg-pl90{
-  width: 40%;
+.nav-toggle:after {
+  transition: all .3s;
+  content: '';
+  position: absolute;
+  left: 10px;
+  width: 3px;
+  height: 100%;
+  background-color: #fff;
 }
 
-.col--lg-p50{
-  width: 70%;
+.nav-toggle:before {
+  top: 0;
 }
 
-.demo-block {
-  padding: 0.5em 1em;
+.nav-toggle:after {
+  bottom: 0;
 }
 
-.page-header{
-width: 100%;
-height: 68px;
-position: absolute;
+.nav-toggle span {
+  position: absolute;
+
+  bottom: 0;
+  margin: auto;
+  width: 3px;
+  height: 100%;
+  font-size: 0;
 }
 
-.logo{
-font-family: 'Prata', Regular;
-font-size: 30px;
-color: #eec643;
-text-decoration: none;
-padding-top: 10px;
+.nav-toggle span:before,
+.nav-toggle span:after {
+  transition: all .3s;
+  content: '';
+  position: absolute;
+  width: 3px;
+  height: 100%;
+  top: 0;
+  background-color: #fff;
 }
 
-.main-nav{
-  padding-top: 40px;
-  padding-right: 40px;
+.nav-toggle:hover:before,
+.nav-toggle:hover:after {
+  opacity: 0;
 }
 
-.main-nav_list{
-  display: flex;
-  justify-content: flex-end;
-  margin: 0;
-  list-style: none;
+.nav-toggle:hover span:before {
+  transform: rotate(45deg);
 }
 
-.main-nav_item{
-  padding-right: 30px;
+.nav-toggle:hover span:after {
+    transform: rotate(-45deg);
 }
 
-.main-nav_link{
-  text-decoration: none;
-  font-family: 'PT Sans', Regular;
-  font-size: 16px;
-  color: #021a23;
-  text-transform: uppercase;
+.main-nav__list {
+display: none;
+    margin: 0;
+    list-style: none;
+    /* display: block; */
+    width: 100vw;
+    height: 225px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding: 75px 15px;
+    font-family: PT Sans;
+    font-size: 15px;
+    text-transform: uppercase;
+    background-color: #000;
 }
 
-.logo-block{
-  margin-top: 20px;
+.main-nav__item {
+    display: block;
+    padding-bottom: 10px;
 }
 
-.promo{
-  width: 100%;
-  height: 570px;
-  background-image: url(../images/bg_main.png);
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-size: 100%;
+.main-nav__link {
+    text-decoration: none;
+    color: #FFF;
 }
 
-.page-header_promo{
-
+.promo {
+    height: 100vh;
+    padding-top: 140px;
+    background-image: url(../images/bg_main.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 0;
 }
 
-.page-header_title{
-font-family: 'Prata', Regular;
-font-weight: normal;
-font-size: 55px;
-color: #f9fcfc;
-margin-left: 55px;
-padding-top: 210px;
-width: 100%;
+.promo_block {
+    padding: 0 18px;
+    margin: 0;
+}
+
+.page-header_title {
+    width: 50%;
+    font-family: Prata;
+    font-size: 32px;
+    font-weight: 400;
+    text-align: left;
+    color: #f9fcfc;
+}
+
+.page-header_title-desktop {
+  display: none;
 }
 
 .page-header_descr{
-font-family: 'PT Sans', Regular;
-font-weight: normal;
-font-size:20px;
-color: #f9fcfc;
-margin-left: 55px;
-width: 60%;
+    padding-bottom: 85px;
+    width: 68%;
+    font-family: PT Sans;
+    font-weight: 400;
+    font-size: 16px;
+    color: #f9fcfc;
 }
 
-.trial{
-border: 2px solid black;
-background-color: white;
-width:75%;
-height:100%;
-margin-top: 170px;
+.promo-form{
+  display: none;
 }
 
-.trial_title{
-text-align: center;
-
+.button{
+    height: 60px;
+    margin: 16px;
+    background-color: #eec643;
 }
 
-
-.container_beginners{
-  margin-top: 90px;
-  display: flex;
-  flex-direction: row;
-}
-
-.beginners{
-width: 100%;
-height: 570px;
-}
-
-.row_beginners{
-flex-direction: row;
-}
-
-.beginners_title{
-font-family: 'Prata', Regular;
-font-size: 50px;
-font-weight: normal;
-color: #021a23;
-transform: rotate(-90deg);
-}
-
-.beginners_title-block{
-width: 8.33%;
-border: 2px solid black;
-margin-right: 30px;
-}
-
-.beginners_block-name{
-font-family: 'PT Sans', Regular;
-font-size: 30px;
-font-weight: bold;
-color: #f9fcfc;
-}
-
-.beginners_block-text-desktop{
-font-family: 'PT Sans', Regular;
-font-size: 20px;
-color: #f9fcfc;
-}
-
-.beginners_block-text-mobile{
-font-family: 'PT Sans', Regular;
-font-size: 16px;
-color: #f9fcfc;
-display: none;
-}
-
-.beginners_guitar{
-background-image: url(../images/directions_card_img_1.png);
-background-repeat: no-repeat;
-height: 270px;
-margin-right: 30px;
-margin-bottom: 30px;
-}
-
-.beginners_vocal{
-background-image: url(../images/directions_card_img_2.png);
-background-repeat: no-repeat;
-height: 270px;
-}
-
-.beginners_piano{
-background-image: url(../images/directions_card_img_3.png);
-background-repeat: no-repeat;
-height: 270px;
-margin-right: 30px;
-}
-
-.beginners_lections{
-background-image: url(../images/directions_card_img_4.png);
-background-repeat: no-repeat;
-height: 270px;
-margin-right: 30px;
-}
-
-.beginners_all-tracks{
-background-color: #eec643;
-height: 270px;
-}
-
-
-
-.tempo{
-width: 100%;
-height: 570px;
-}
-
-.container_tempo{
-  margin-top: 90px;
-  display: flex;
-  flex-direction: row;
-}
-
-.tempo_title-block{
-border-top: 2px solid #eec643;
-border-bottom: 2px solid #eec643;
-margin-bottom: 30px;
-height: 70px;
-}
-
-.tempo_title-text{
-font-family: 'Prata', Regular;
-font-size: 50px;
-font-weight: normal;
-color: #021a23;
-position: relative;
-top: -36px;
-}
-
-.tempo_block-name{
-font-family: 'PT Sans', Bold;
-font-size: 30px;
-font-weight: bold;
-color: #f9fcfc;
-}
-
-.tempo_block-text{
-font-family: 'PT Sans', Regular;
-font-size: 20px;
-font-weight: normal;
-color: #f9fcfc;
-}
-
-.tempo_command{
-background-image: url(../images/advantages_card_img_1.png);
-height: 470px;
-background-repeat: no-repeat;
-}
-
-.tempo_result{
-background-image: url(../images/advantages_card_img_2.png);
-height: 470px;
-background-repeat: no-repeat;
-}
-
-.tempo_studio{
-background-image: url(../images/advantages_card_img_3.png);
-background-repeat: no-repeat;
-height: 570px;
-}
-
-.tempo_form-trial{
-height: 570px;
-background-color: #eec643;
-}
-
-
-
-.inschool{
-width: 100%;
-height: 570px;
-}
-
-.row_inschool{
-  flex-direction: column;
-}
-
-.container_inschool{
-  margin-top: 90px;
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 90px;
-}
-
-.row_inschool{
-  flex-direction: column;
-}
-
-.inschool_title-block{
-  width: 8.33%;
-  border: 2px solid black;
-  margin-right: 30px;
-  height: 570px;
-}
-
-.inschool_title{
-font-family: 'Prata', regular;
-font-size: 50px;
-font-weight: normal;
-color: #021a23;
-transform: rotate(-90deg);
-}
-
-.inschool_promo{
-background-image: url(../images/video_card_img_1.png);
-background-repeat: no-repeat;
-margin-right: 30px;
-}
-
-.inschool_promo-info{
-}
-
-.inschool_block-name{
-font-family: 'PT Sans', regular;
-font-size: 30px;
-font-weight: bold;
-color: #f9fcfc;
-}
-
-.inschool_block-text{
-font-family: 'PT Sans', regular;
-font-size: 20px;
-font-weight: normal;
-color: #f9fcfc;
-}
-
-.inschool_promo_small{
-height: 570px;
-}
-
-.inschool_promo_small-name{
-font-family: 'PT Sans', regular;
-font-size: 20px;
-font-weight: bold;
-color: #f9fcfc;
-}
-
-.inschool_promo_small-text{
-font-family: 'PT Sans', regular;
-font-size: 14px;
-font-weight: normal;
-color: #f9fcfc;
-}
-
-.inschool_promo_small-1{
-background-image: url(../images/video_card_img_2.png);
-background-repeat: no-repeat;
-height: 170px;
-}
-
-.inschool_promo_small-2{
-background-image: url(../images/video_card_img_3.png);
-background-repeat: no-repeat;
-height: 170px;
-}
-
-.inschool_promo_small-3{
-background-image: url(../images/video_card_img_4.png);
-background-repeat: no-repeat;
-height: 170px;
-}
-
-
-
-.welcome{
-width: 100%;
-height: 570px;
-}
-
-.welcome_info{
-
-}
-
-.container_welcome{
-  margin-top: 90px;
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 90px;
-}
-
-.welcome-title{
-  border-top: 2px solid #eec643;
-  border-bottom: 2px solid #eec643;
-}
-
-.welcome_title-block{
-display: flex;
-flex-direction: row;
-}
-
-.welcome_title-text{
-font-family: 'Prata', Regular;
-font-size: 50px;
-font-weight: normal;
-color: #021a23;
-}
-
-.welcome_address-block{
-}
-
-.welcome_phone{
-font-family: 'PT Sans', regular;
-font-size: 20px;
-font-weight: normal;
-color: #021a23;
-}
-
-.welcome_address{
-font-family: 'PT Sans', regular;
-font-size: 20px;
-font-weight: normal;
-color: #021a23;
-}
-
-.welcome_map{
-background-image: url(../images/Map.png);
-}
-
-.form-trial{
-  border: 2px solid #eec643;
-}
-
-
-.footer_block{
-display: flex;
-flex-direction: row;
-}
-
-.footer_logo-block{
-  border: 1px solid black;
-  width: 100%;
-}
-
-.footer_nav{
-  border: 1px solid black;
-}
-
-.footer_nav-list{
-  display: flex;
-  justify-content: flex-end;
-  margin: 0;
-  list-style: none;
-}
-
-.footer_nav-item{
-  padding-left: 20px;
-}
-
-.footer-nav_link{
+.promo-button{
   text-decoration: none;
-  font-family: 'PT Sans', Regular;
-  font-size: 12px;
-  color: #021a23;
+}
+
+.promo-button_text{
+  padding-top: 20px;
   text-transform: uppercase;
+  text-align: center;
+  color: #f9fcfc;
+}
+
+
+.beginners,
+.tempo,
+.inschool {
+    position: relative;
+    margin: 0 auto;
+    padding: 0 16px;
+
+}
+
+.beginners_title,
+.tempo_title,
+.inschool_title,
+.welcome_title {
+    font-family: Prata;
+    font-weight: 400;
+    font-size: 30px;
+    margin-bottom: 16px;
+    padding: 4px 0;
+    border-top: solid 2px #eec643;
+    border-bottom: solid 2px #eec643;
+}
+
+.beginners_item,
+.tempo_item,
+.inschool_promo-block {
+    position: relative;
+    height: 144px;
+    margin-bottom: 16px;
+    padding: 0;
+}
+
+.beginners_title-block {
+    margin: 0;
+    padding-top: 10px;
+}
+
+.beginners_item-vocal {
+    width: 100%;
+    background-image: url(../images/directions_card_img_2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.beginners_item-lections {
+    display: none;
+}
+
+.block_item-name,
+.block_item-text {
+    color: #f9fcfc;
+}
+
+.block_item-name {
+    margin: 0;
+    padding-top: 30px;
+    padding-left: 10px;
+    font-family: PT Sans;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.block_item-text {
+    margin: 0;
+    padding-left: 10px;
+    padding-right: 55px;
+    font-family: PT Sans;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: left;
+}
+
+.beginners-desktop,
+.tempo-right {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+
+.beginners_item-guitar {
+    width: 100%;
+    background-image: url(../images/directions_card_img_1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.beginners_item-piano {
+    width: 75%;
+    margin: 0;
+    background-image: url(../images/directions_card_img_3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.beginners_item-button {
+    position: relative;
+    width: 20%;
+    padding: 10px;
+    overflow: hidden;
+    background-color: #eec643;
+}
+
+
+.beginners__button {
+    position: absolute;
+    display: flex;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    transform: rotate(-90deg);
+    justify-content: center;
+    align-items: center;
+    font-family: PT Sans;
+    font-weight: 400;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #021a23;
+}
+
+.tempo-command {
+    width: 100%;
+    background-image: url(../images/advantages_card_img_1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.tempo-result {
+    width: 100%;
+    background-image: url(../images/advantages_card_img_2.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.tempo-studio {
+    width: 75%;
+    background-image: url(../images/advantages_card_img_3.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.promo-button {
+    display: flex;
+    width: 20%;
+    height: 144px;
+    margin: 0;
+    padding: 14px;
+    overflow: hidden;
+}
+
+.tempo_button {
+    transform: rotate(-90deg);
+    font-family: PT Sans;
+    font-weight: 400;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #f9fcfc;
+}
+
+.school__content-item-cherry {
+    width: 90%;
+    margin: 0 auto;
+    height: 186px;
+}
+
+.triangle-small {
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 75px;
+    bottom: 0;
+    left: 30px;
+    right: 0;
+    margin: auto;
+    border: 27px solid transparent;
+    border-top: 35px solid #eec643;
+    transform: rotate(-90deg);
+    z-index: 1;
+}
+
+.inschool_image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+}
+
+.inschool__image img {
+    width: 100%;
+    min-height: 100%;
+}
+
+
+.inschool_promo-block-violin,
+.inschool_promo-block-summer,
+.inschool_promo-block-horse,
+.tempo-form,
+.welcome-form {
+    display: none;
+}
+
+.inschool_name-sign {
+    margin: 0;
+    padding-top: 80px;
+    text-align: justify;
+}
+
+.slick-arrow {
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 0;
+    color: transparent;
+    overflow: hidden;
+    border: 0;
+}
+
+.slick-next {
+    right: 0;
+}
+
+.slick-prev {
+    left: 0;
+    z-index: 1;
+}
+
+.slick-next:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    border-right: 1px solid #eec643;
+    border-bottom: 1px solid #eec643;
+    transform: translate(-50% -50%) rotate(-45deg);
+}
+
+.welcome {
+    margin: 0 auto;
+    padding: 30px 16px;
+}
+
+.welcome_block-address {
+    margin: 0;
+    padding-left: 10px;
+    font-family: PT Sans;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: left;
+    color: #021a23;
+}
+
+.welcome_block-address a{
+    margin: 0;
+    text-decoration: none;
+    color: #021a23;
+}
+
+.block_text-address {
+    margin: 0;
+}
+
+.welcome_map {
+    width: 100%;
+    height: 220px;
+    margin-top: 16px;
+    padding: 0;
+}
+
+
+.welcome-info {
+    display: flex;
+    flex-basis: 25%;
+    max-width: 25%;
+}
+/*
+.fist-lesson__button {
+    text-decoration: none;
+}
+
+.fist-lesson-text {
+    padding-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #f9fcfc;
+}
+*/
+
+.footer {
+    display: none;
+}
+
+
+/*Граница*/
+
+@media (min-width: 320px) {
+
+}
+
+
+
+@media (min-width: 1200px) {
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    font-family: sans-serif;
+}
+
+.page-header {
+    position: fixed;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: 3;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+
+.container {
+    display: flex;
+    width: 1170px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 34px;
+    margin: 0 auto;
+}
+
+.logo-block {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    text-decoration: none;
+    font-family: Prata;
+    font-size: 30px;
+    font-weight: 400;
+    font-style: normal;
+    color: #eec643;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav {
+    display: flex;
+
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.main-nav_list {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: transparent;
+}
+
+.main-nav_link {
+    margin: 0;
+    padding-left: 30px;
+    text-decoration: none;
+    text-align: right;
+    font-family: PT Sans;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #021a23;
+}
+
+.promo {
+    display: flex;
+    min-height: 770px;
+    padding-top: 140px;
+    margin: 0 auto;
+    padding: 0;
+    background: url(../images/bg_main.png) no-repeat;
+    background-size: cover;
+}
+
+.container_promo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 1170px;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.page-header_title {
+    font-family: Prata;
+    font-size: 55px;
+    font-weight: 400;
+    text-align: left;
+    color: #f9fcfc;
+}
+
+.page-header_descr {
+    font-family: PT Sans;
+    font-weight: 400;
+    font-size: 20px;
+    color: #f9fcfc;
+}
+
+.button {
+    display: none;
+}
+
+.promo-form {
+    position: relative;
+    display: flex;
+    height: 417px;
+    width: 270px;
+    padding: 0;
+    margin-top: 50px;
+    border: solid 3px #021a23;
+    background-color: #fff;
+}
+
+.promo-form_title {
+    margin: 0;
+    padding: 15px 30px;
+    text-align: left;
+    font-family: PT Sans;
+    font-weight: 700;
+    font-size: 30px;
+    color: #021a23;
+}
+
+.promo-form_button {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    padding: 15px;
+    margin: 0;
+    text-align: center;
+    font-family: PT Sans;
+    font-weight: 400;
+    font-size: 30px;
+    color: #f9fcfc;
+    background-color: #021a23;
+    border: none;
+}
+
+.promo-form_descr {
+    padding-left: 30px;
+    margin: 0;
+    text-align: left;
+    font-family: PT Sans;
+    font-weight: 400;
+    font-size: 20px;
+    color: #021a23;
+    vertical-align: bottom;
+}
+
+.promo-form {
+    margin-top: 40px;
+    padding: 0;
+}
+
+.description-form {
+    margin-left: 30px;
+    padding-top: 20px;
+    text-align: left;
+    font-family: PT Sans;
+    font-weight: 400;
+    font-size: 20px;
+    color: #021a23;
+    vertical-align: bottom;
+    width: 200px;
+    border: none;
+    border-bottom: 2px solid #021a23;
+}
+
+.option-disc:before:after {
+    padding-left: 15px;
+}
+
+
+.beginners,
+.tempo,
+.inschool {
+    margin: 0 auto;
+    padding: 0;
+}
+
+.beginners,
+.inschool {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 1170px;
+    min-height: 570px;
+    padding-top: 90px;
+}
+
+.beginners_title-block,
+.inschool_title-block {
+    display: flex;
+    flex: 0 0 8.33333%;
+    max-width: 8.33333%;
+    width: 8.33333%;
+    padding: 0;
+    margin: 0;
+
+}
+
+.beginners-desktop,
+.tempo-right {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+.beginners_title,
+.inschool_title {
+    margin: 0;
+    padding: 0;
+    writing-mode: vertical-lr;
+    transform: rotate(-180deg);
+    font-family: Prata;
+    font-weight: 400;
+    font-size: 50px;
+    justify-content: center;
+    align-items: center;
+    border-right: solid 2px #eec643;
+    border-left: solid 2px #eec643;
+    border-top: none;
+    border-bottom: none;
+}
+
+.block_item-name,
+.block_item-text {
+    color: #f9fcfc;
+}
+
+.block_item-name {
+    margin: 0;
+    padding-top: 24px;
+    padding-left: 32px;
+    padding-bottom: 27px;
+    font-family: PT Sans;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.block_item-text {
+    margin: 0;
+    padding-left: 32px;
+    padding-right: 55px;
+    font-family: PT Sans;
+    font-weight: 400;
+    font-size: 20px;
+    text-align: left;
+}
+
+.beginners_item {
+    min-height: 271px;
+}
+
+.beginners_item,
+.tempo_item,
+.inschool_promo-block {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.beginners_item-vocal {
+    padding: 0;
+    margin: 0;
+    max-width: 53%;
+    order: 2;
+    background-image: url(../images/directions_card_img_2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.beginners_item-guitar {
+    max-width: 43.66667%;
+    padding: 0;
+    margin: 0;
+    order: 1;
+    background-image: url(../images/directions_card_img_1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.beginners_item-piano {
+    max-width: 43.66667%;
+    padding: 0;
+    margin-top: 30px;
+    order: 3;
+    background-image: url(../images/directions_card_img_3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.beginners_item-lections {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    flex-basis: 25%;
+    max-width: 25%;
+    padding: 0;
+    margin-top: 30px;
+    order: 4;
+    background-image: url(../images/directions_card_img_4.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.beginners_item-button {
+    flex-basis: 25%;
+    max-width: 25%;
+    padding: 0;
+    margin-top: 30px;
+    order: 5;
+    background-color: #eec643;
+}
+
+.beginners__button {
+    display: flex;
+    margin: 0;
+    padding-left: 30px;
+    align-items: flex-start;
+    transform: rotate(0deg);
+    font-family: PT Sans;
+    font-weight: 700;
+    font-size: 30px;
+    text-decoration: none;
+    color: #f9fcfc;
+    text-align: left;
+}
+
+.tempo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 1170px;
+    min-height: 570px;
+    margin: 0 auto;
+    padding-top: 90px;
+}
+
+.tempo-left {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 50%;
+    max-height: 570px;
+    margin: 0;
+    padding: 0;
+}
+
+.tempo_title-block {
+    display: flex;
+    width: 100%;
+    height: 70px;
+    padding: 0;
+    margin-bottom: 30px;
+    border-top: solid 2px #eec643;
+    border-bottom: solid 2px #eec643;
+}
+
+.tempo_title {
+    padding-left: 20px;
+    margin: 0;
+    align-items: center;
+    font-family: Prata;
+    font-weight: 400;
+    font-size: 50px;
+    border: none;
+}
+
+.tempo-command {
+    width: 47%;
+    height: 470px;
+    padding: 0;
+    margin: 0;
+    background-image: url(../images/advantages_card_img_1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.tempo-result {
+    width: 47%;
+    height: 470px;
+    margin-left: 30px;
+    padding: 0;
+    background-image: url(../images/advantages_card_img_2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.tempo-right {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex-basis: 50%;
+    max-width: 50%;
+    min-height: 570px;
+    margin-left: 30px;
+    padding: 0;
+}
+
+.tempo-studio {
+    flex-basis: 50%;
+    max-width: 50%;
+    height: 570px;
+    padding: 0;
+    margin: 0;
+    background-image: url(../images/advantages_card_img_3.png);
+    background-repeat: no-repeat;
+    background-position: 25% 0;
+}
+
+.tempo-form {
+    position: relative;
+    display: flex;
+    height: 570px;
+    flex-basis: 50%;
+    max-width: 50%;
+    padding: 0;
+    margin-left: 30px;
+    border: solid 3px #eec643;
+    background-color: #fff;
+}
+
+.tempo_form-title {
+    margin: 0;
+    padding: 20px 30px;
+    text-align: left;
+    font-family: PT Sans;
+    font-weight: 700;
+    font-size: 30px;
+    color: #eec643;
+}
+
+.tempo_form-sign {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding: 15px;
+    margin: 0;
+    text-align: center;
+    font-family: PT Sans;
+    font-weight: 400;
+    font-size: 30px;
+    color: #f9fcfc;
+    background-color: #eec643;
+    border: none;
+}
+
+.tempo_form-descr {
+    padding-left: 30px;
+    margin: 0;
+    text-align: left;
+    font-family: PT Sans;
+    font-weight: 400;
+    font-size: 20px;
+    color: #021a23;
+    vertical-align: bottom;
+}
+
+.tempo_description-block {
+    margin-top: 200px;
+    padding: 0;
+}
+
+.tempo_description-form {
+    width: 200px;
+    margin-left: 30px;
+    padding-top: 20px;
+    text-align: left;
+    font-family: PT Sans;
+    font-weight: 400;
+    font-size: 20px;
+    color: #021a23;
+    vertical-align: bottom;
+    border: none;
+    border-bottom: 2px solid #eec643;
+}
+
+
+.option-disc:before:after {
+    padding-left: 15px;
+}
+
+
+.promo-button {
+    width: 270px;
+    height: 570px;
+    margin: 0;
+    padding-left: 30px;
+    transform: rotate(0deg);
+    padding: 14px;
+    text-align: center;
+}
+
+.tempo_button {
+    font-family: PT Sans;
+    font-weight: 700;
+    font-size: 30px;
+    text-decoration: none;
+    color: #eec643;
+}
+
+
+.inschool_title-block {
+    display: flex;
+    flex-basis: 8.33333%;
+    max-width: 8.33333%;
+    padding: 0;
+    margin: 0;
+}
+
+
+.inschool_promo {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    max-height: 570px;
+}
+
+.inschool_name {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.triangle-small {
+    display: none;
+}
+
+.triangle-big {
+    position: absolute;
+    width: 0;
+    height: 0;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 385px;
+    border: 55px solid transparent;
+    border-top: 70px solid #eec643;
+    transform: rotate(-90deg);
+    z-index: 1;
+}
+
+.inschool_promo-block-cherry {
+    position: relative;
+    width: 72%;
+    margin-right: 30px;
+    padding: 0;
+    height: 100%;
+}
+
+.inschool_promo-block-cherry .inschool_name {
+    justify-content: flex-start;
+}
+
+.triangle-aside {
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 0;
+    bottom: 0;
+    left: 117px;
+    margin: auto;
+    border: 27px solid transparent;
+    border-top: 35px solid #eec643;
+    transform: rotate(-90deg);
+    z-index: 1;
+}
+
+.block_item-name-small {
+    margin: 0;
+    padding: 0;
+    font-family: PT Sans;
+    font-weight: 700;
+    font-size: 14px;
+    color: #f9fcfc;
+}
+
+.block_item-text-small {
+    margin: 0;
+    padding: 0;
+    font-family: PT Sans;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: left;
+    color: #f9fcfc;
+}
+
+.inschool_name-sign {
+    display: flex;
+    margin: 0;
+    padding-left: 10px;
+    padding-bottom: 12px;
+    justify-content: flex-end;
+}
+
+.inschool_promo-block-violin {
+    display: flex;
+    position: relative;
+    height: 167px;
+    width: 25%;
+    padding-bottom: 30px;
+}
+
+.inschool_promo-block-summer {
+    display: flex;
+    position: relative;
+    height: 167px;
+    width: 25%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.inschool_promo-block-horse {
+    display: flex;
+    position: relative;
+    height: 167px;
+    width: 25%;
+}
+
+.button__bottom {
+    display: none;
+}
+
+.welcome {
+    display: flex;
+    max-width: 1170px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 0 0 100%;
+    width: 100%;
+    margin-top: 90px;
+    padding: 0;
+}
+
+.welcome_container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex-basis: 75%;
+    width: 75%;
+    margin: 0;
+    padding: 0;
+}
+
+.welcome_block {
+    display: flex;
+    width: 100%;
+    max-height: 70px;
+    flex-direction: row;
+    align-content: space-between;
+}
+
+.welcome_title {
+    width: 65%;
+    padding-left: 20px;
+    margin: 0;
+    font-family: Prata;
+    font-weight: 400;
+    font-size: 50px;
+    border-top: solid 2px #eec643;
+    border-bottom: solid 2px #eec643;
+}
+
+.welcome_block-address {
+    position: relative;
+    margin: 0;
+    padding-left: 30px;
+    font-family: PT Sans;
+    font-weight: 400;
+    font-size: 20px;
+    text-align: left;
+    color: #021a23;
+}
+
+.welcome_block-address a {
+    position: absolute;
+    top: 15px;
+}
+
+.block_text-address {
+    padding-top: 40px;
+    margin: 0;
+
+}
+
+.welcome_map {
+    display: flex;
+    flex-basis: 100%;
+    max-width: 100%;
+    height: 467px;
+    margin-top: 30px;
+    padding: 0;
+}
+
+
+.welcome-info {
+    display: flex;
+    flex-basis: 25%;
+    max-width: 25%;
+}
+
+.welcome-form {
+    display: flex;
+    position: relative;
+    height: 567px;
+    width: 270px;
+    padding: 0;
+    margin-left: 30px;
+    border: solid 3px #eec643;
+    background-color: #fff;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 1170px;
+    margin: 0 auto;
+    padding-top: 87px;
+    padding-bottom: 48px;
+}
+
+.footer_logo-text {
+    text-decoration: none;
+    font-family: Prata;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+    color: #eec643;
+}
+
+.footer_nav {
+    display: flex;
+    align-content: flex-end;
+    margin: 0;
+    padding: 0;
+}
+
+.footer_nav-list {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.footer-nav_link {
+    padding-left: 45px;
+    margin: 0;
+    text-decoration: none;
+    font-family: PT Sans;
+    font-size: 12px;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+    color: #021a23;
+}
+
 }
