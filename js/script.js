@@ -27,10 +27,10 @@ $(document).ready(function(){
 	}
 	$('.nav-toggle>span').on('click', function(){
 		if($(this).data('shown') != 'true'){
-			$('.main-nav__list', '.main-nav').show();
+			$('.main-nav_list', '.main-nav').show();
 			$(this).data('shown', 'true')
 		} else {
-			$('.main-nav__list', '.main-nav').hide();
+			$('.main-nav_list', '.main-nav').hide();
 			$(this).data('shown', 'false')
 		}
 

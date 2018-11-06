@@ -29,8 +29,8 @@ h4 {
 }
 
 .page-header {
+    position: absolute;
     width: 100%;
-    position: fixed;
     margin: 0 auto;
     padding: 0;
     z-index: 1;
@@ -43,14 +43,14 @@ h4 {
     margin: 0;
 }
 
-.logo {
+.logo-block {
     width: 70px;
     padding: 0;
     margin: 0;
     z-index: 2;
 }
 
-.logo__text {
+.logo {
     text-decoration: none;
     font-family: Prata;
     font-size: 30px;
@@ -103,7 +103,6 @@ h4 {
 
 .nav-toggle span {
   position: absolute;
-
   bottom: 0;
   margin: auto;
   width: 3px;
@@ -135,11 +134,10 @@ h4 {
     transform: rotate(-45deg);
 }
 
-.main-nav__list {
+.main-nav_list {
 display: none;
     margin: 0;
     list-style: none;
-    /* display: block; */
     width: 100vw;
     height: 225px;
     position: absolute;
@@ -153,12 +151,13 @@ display: none;
     background-color: #000;
 }
 
-.main-nav__item {
+.main-nav_item {
     display: block;
     padding-bottom: 10px;
+    height: 20px;
 }
 
-.main-nav__link {
+.main-nav_link {
     text-decoration: none;
     color: #FFF;
 }
@@ -504,18 +503,6 @@ display: none;
     flex-basis: 25%;
     max-width: 25%;
 }
-/*
-.fist-lesson__button {
-    text-decoration: none;
-}
-
-.fist-lesson-text {
-    padding-top: 20px;
-    text-transform: uppercase;
-    text-align: center;
-    color: #f9fcfc;
-}
-*/
 
 .footer {
     display: none;
@@ -540,7 +527,6 @@ body {
 }
 
 .page-header {
-    position: fixed;
     width: 100%;
     margin: 0;
     padding: 0;
